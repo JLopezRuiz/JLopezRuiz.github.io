@@ -1,13 +1,13 @@
 require('dotenv').config();
 
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+import express from 'express';
+import cors from 'cors';
+import { json } from 'body-parser';
 // const spotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json());
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
